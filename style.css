@@ -98,7 +98,7 @@ main { flex: 1; }
   inset-inline-start: 0;
   inset-inline-end: 0;
   bottom: 0;
-  height: 4px;
+  height: 3px;
   background: var(--light);
   border-radius: 2px;
 }
@@ -203,18 +203,18 @@ main { flex: 1; }
 
 /* IMAGE */
 .image-container {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #eee;
+  width: 100%;       /* parent کے مطابق full width */
+  max-width: 870px;  /* optional: max width limit */
+  margin: 0 auto;    /* center کرنا */
 }
+
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.4s;
+  width: 100%;       /* container کے مطابق stretch */
+  height: auto;      /* aspect ratio برقرار رکھے */
+  display: block;    /* unnecessary space remove کرے */
+  border-radius: 8px; /* optional: rounded corners */
 }
-
 .image-container img:hover {
   transform: scale(1.05);
 }
